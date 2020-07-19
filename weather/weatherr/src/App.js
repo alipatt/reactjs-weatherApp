@@ -59,8 +59,6 @@ export default class App extends Component {
         `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=${API_KEY}`
       )
       .then(res => {
-        
-        console.log(res);
         this.setState({
           city: res.data.name,
           country: res.data.sys.country,
